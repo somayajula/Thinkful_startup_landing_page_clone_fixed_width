@@ -1,0 +1,218 @@
+/**
+	This is a clone of the starup https://yourkarma.com/.
+	This is done as part of Thinkful bootcamp. This design is an old version of the original webpage.
+	This page is intentionally not-responsive as there is a responsive version seperately.
+**/
+
+/* Paul Irish Box-Sizing: Border-Box reset - apply a natural box layout model to all elements, but allowing components to change http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End of reset CSS */
+
+/* Site styles from here */
+body {
+    font-family: 'Roboto', sans-serif;
+
+    /* Will be fixed in the responsive version of the website!! */
+    min-width: 960px;
+}
+a {
+	text-decoration: none;
+}
+/* Simple clear fix for floats! */
+.clearfix {
+	overflow: hidden;
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.masthead {
+	position: fixed;
+	width: 100%;
+	height: 70px;
+	z-index: 99999;
+	background: white;
+	border-bottom: 1px solid #DDD;
+}
+.masthead img {
+	width: 26px;
+	height: 70px;
+}
+.masthead nav {
+	float: right;
+	margin-top: 25px;
+}
+.masthead li {
+	display: inline-block;
+}
+.masthead li a {
+	padding: 0 15px;
+	display: inline-block;
+	color: #838994;
+}
+.masthead .active a {
+	color: #4c5058;
+	font-weight: 500;
+}
+.masthead li a:hover {
+	color: #333;
+}
+
+.introduction {
+	background: url("../images/KarmaBackGround.jpg") center bottom no-repeat;
+	background-size: cover;
+}
+.introduction .container {
+	padding-top: 270px;
+	padding-bottom: 200px;
+	text-align: center;
+}
+.introduction h1,
+.introduction p {
+	color: white;
+	font-size: 2.8em;
+	font-weight: 300;
+}
+.introduction p {
+	font-size: 1.4em;
+	margin: 1em 0 1.4em 0;
+}
+.introduction a {
+	display: inline-block;
+	padding: 1em 1.5em;
+	border-radius: 4px;
+	background: #f15a29;
+	color: white;
+}
+.introduction a:hover {
+	background: #d9400e;
+}
+
+.cases {
+	background: white;
+}
+.cases .container {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	text-align: center;
+}
+.cases h2 {
+	margin-bottom: 1em;
+	font-size: 2.3em;
+	font-weight: 300;
+}
+.cases ul li {
+	float: left;
+	width: 310px;
+	padding: 0 1em;
+}
+.cases li > img {
+	width: 127px;
+}
+.cases li > p {
+	font-weight: 400;
+	font-size: 1.5em;
+	margin-top: 1em;
+}
+.site-footer .container {
+	border-top: 1px solid #eaebec;
+	padding-top: 1.5em;
+	padding-bottom: 100px;
+	text-align: center;
+}
+.site-footer ul {
+	margin: 1em 0;
+}
+.site-footer li {
+	display: inline-block;
+	padding: 0 .7em;
+}
+.site-footer li a {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	border: 1px solid #eaebec;
+	border-radius: 50%;
+	font-size: 1.2em;
+	line-height: 2em; /* to vertically centter align the text */
+}
+.site-footer .fa-twitter {
+	color: #55acee;
+}
+.site-footer .fa-facebook {
+	color: #4c66a4;
+}
+.site-footer .fa-instagram {
+	color: #3f729b;
+}
+.site-footer li span {
+	position: absolute;
+ 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  	clip: rect(1px, 1px, 1px, 1px);
+}
+.copyrights {
+	color: #838994;
+	font-size: 0.8em;
+}
+.copyrights p {
+	margin-bottom: 1em;
+}
